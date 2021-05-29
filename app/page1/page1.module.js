@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('page2', [
+    .module('page1', [
       'example.core',
       'example-list-item'
     ]);

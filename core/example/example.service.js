@@ -5,9 +5,9 @@
     .module('example.core')
     .factory('exampleService', exampleService);
 
-  exampleService.$inject = ['$http'];
+  exampleService.$inject = ['$http', 'apiBaseUrl'];
 
-  function exampleService($http) {
+  function exampleService($http, apiBaseUrl) {
 
     const service = {
       getExamples: getExamples
@@ -18,6 +18,7 @@
     ////////
 
     function getExamples() {
+      return $http.get(`${apiBaseUrl}/example`);
     }
   }
 })();

@@ -2,8 +2,12 @@
   'use strict';
 
   const component = {
-    templateUrl: './example-list-item.component.html',
-    controller: ExampleListItemController
+    templateUrl: 'shared/example-list-item/example-list-item.component.html',
+    controller: ExampleListItemController,
+    controllerAs: 'vm',
+    bindings: {
+      example: '='
+    }
   };
 
   angular

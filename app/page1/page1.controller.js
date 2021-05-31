@@ -24,8 +24,8 @@
 
     function getExamples() {
       exampleService.getExamples()
-        .then((data) => {
-          vm.examples = data;
+        .then((response) => {
+          vm.examples = response.data;
         });
     }
   }

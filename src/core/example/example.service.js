@@ -23,7 +23,10 @@
     }
 
     function saveExample(example) {
-      return $http.post(example.id ? `${apiBaseUrl}/example/${example.id}` : `${apiBaseUrl}/example`, example);
+      const url = example.id ?
+        `${apiBaseUrl}/example/${example.id}` :
+        `${apiBaseUrl}/example`;
+      return $http.post(url, example);
     }
   }
 })();
